@@ -1,3 +1,3 @@
 # keycloak-auth-with-React-18-
 
-## Wrap *ReactKeycloakProvider* around *React.StrictMode* 
+## Tips : Wrap *ReactKeycloakProvider* around *React.StrictMode* to use keycloak authentication with React 18
