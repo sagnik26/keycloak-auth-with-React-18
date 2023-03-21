@@ -5,6 +5,11 @@ import './App.css'
 function App() {
   const { keycloak } = useKeycloak()
 
+  if(keycloak.authenticated) {
+    console.log(keycloak.token)
+    console.log('token', JSON.stringify(keycloak.token))
+  }
+
   return (
     <div>
         <h1> Keycloak SSO Test </h1>
@@ -21,7 +26,11 @@ function App() {
         }
 
         {
-          keycloak.authenticated ? <h2>You are authenticated :\</h2> : <h2>Hello, please login</h2>
+          keycloak.authenticated? (
+            <>
+            <h2>Authenticated :\</h2>
+            </>
+          ) : null
         }
         
     </div>
